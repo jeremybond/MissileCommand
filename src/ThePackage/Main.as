@@ -1,5 +1,6 @@
 package ThePackage
 {
+	import flash.automation.StageCaptureEvent;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;
 	import flash.events.Event;
@@ -8,6 +9,10 @@ package ThePackage
 	import flash.sampler.NewObjectSample;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
+	import ThePackage.BackGroundStuff.Human;
+	import ThePackage.BackGroundStuff.HumanFactory;
+	import ThePackage.Crap.Crap;
+	import ThePackage.Crap.SpaceCrapFactory;
 	import ThePackage.Crap.StarCrap;
 	import ThePackage.Crap.NormalCrap;
 	import ThePackage.PlayerObjects.Bullet;
@@ -27,7 +32,12 @@ package ThePackage
 		public var shootingTowerX:Number;
 		public var shootingTowerY:Number;
 		public static var _allCraps:Array = [];
-		public var TimeOhTime:Timer;
+		public static var _allHuman:Array = [];
+		public var timerCrap:Timer;
+		public var timerHuman:Timer;
+		
+		private var spaceCrapFactory	:	SpaceCrapFactory	=	new SpaceCrapFactory();
+		private var humanFactory	:	HumanFactory	=	new HumanFactory();
 		
 		public static var main:Main;
 		
@@ -45,17 +55,30 @@ package ThePackage
 			tower2.y = stage.stageHeight - 100;
 			tower3.y = stage.stageHeight - 100;
 			
-			TimeOhTime = new Timer((Math.random() * 2000)+1000, 0);
-			TimeOhTime.addEventListener(TimerEvent.TIMER, spawnCrap);
-			TimeOhTime.start();
+			timerCrap = new Timer((Math.random() * 2000)+1000, 0);
+			timerCrap.addEventListener(TimerEvent.TIMER, spawnCrap);
+			timerCrap.start();
+			
+			timerHuman = new Timer((Math.random() * 500) + 500, 0);
+			timerHuman.addEventListener(TimerEvent.TIMER, spawnHuman);
+			timerHuman.start();
 			
 			stage.addEventListener(Event.ENTER_FRAME, loop);
 			stage.addEventListener(MouseEvent.CLICK, mouseClick);
 		}
-		
+		private function spawnHuman(e:TimerEvent):void
+		{
+			var randomHuman : int = Math.random() * 4;
+			var newHuman : Human = humanFactory.makeHuman(randomHuman);
+			_allHumans.push(newHuman);
+			newHuman.x = newHuman.position;
+			newHuman.y = stage.stageHeight - 100;
+			addChild(newHuman);
+		}
 		private function spawnCrap(e:TimerEvent):void 
 		{
-			var newCrap : NormalCrap = new NormalCrap();
+			var randomType:Number = (Math.random()*2);
+			var newCrap : Crap = spaceCrapFactory.makeSpaceCrap(randomType);
 			_allCraps.push(newCrap);
 			newCrap.x = Math.random() * stage.stageWidth;
 			newCrap.y = -20;
@@ -90,7 +113,6 @@ package ThePackage
 				newBullet.x = tower3.x;
 				newBullet.y = tower3.y;
 			}
-			trace(random);
 			var gx:Number =  shootingTowerX - mouseX ;
 			var gy:Number =  shootingTowerY - mouseY;
 			var RadiansB:Number = Math.atan2(gy, gx);
@@ -101,6 +123,14 @@ package ThePackage
 		
 		public function loop(e:Event):void
 		{
+			/*var people:MovieClip;
+			var p : _allHuman.length;
+			for (var n:int = p; n >= 0; n--) 
+			{
+				people = _allHuman[n];
+				people.
+			}*/
+			
 			/////////////////////////// all bullets get updated and deleted ///////////////////////////
 			var bulled:MovieClip;
 			var crap : MovieClip;
@@ -154,3 +184,5 @@ package ThePackage
 	}
 
 }
+
+

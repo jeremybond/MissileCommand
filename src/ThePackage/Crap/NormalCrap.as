@@ -7,26 +7,20 @@ package ThePackage.Crap
 	 * ...
 	 * @author Jeremy Bond
 	 */
-	public class NormalCrap extends Crap2Art
+	public class NormalCrap extends Crap
 	{
-		public var rotationNumb:Number = Math.random();
+		private var art:Crap2Art;
 		public function NormalCrap() 
 		{
+			art = new Crap2Art();
+			addChild(art);
+			
+			id = "Normal";
+			splice = false;
+			damage = 10;
+			speed = ((Math.random() * 3) + 2);
 			
 		}
-		public function update():void
-		{
-			if (rotationNumb < 0.5) rotation ++;
-			if (rotationNumb > 0.5) rotation --;
-			y += 5;
-			var nBul:int = Main._allBullets.length;
-			
-			//if (item.hitTestObject(this)) 
-			//{
-				//trace("jes");
-			//}
-		}
-		
 		
 	}
 
