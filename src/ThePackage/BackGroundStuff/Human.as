@@ -61,9 +61,9 @@ package ThePackage.BackGroundStuff
 		{
 			if (_left == true)
 			{
-				y += _speed;
+				this.y += _speed;
 			}else {
-				y -= -speed;
+				this.y -= -speed;
 			}
 			
 		}

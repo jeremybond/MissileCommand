@@ -70,7 +70,7 @@ package ThePackage
 		{
 			var randomHuman : int = Math.random() * 4;
 			var newHuman : Human = humanFactory.makeHuman(randomHuman);
-			_allHumans.push(newHuman);
+			_allHuman.push(newHuman);
 			newHuman.x = newHuman.position;
 			newHuman.y = stage.stageHeight - 100;
 			addChild(newHuman);
