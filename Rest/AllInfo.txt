@@ -1,0 +1,18 @@
+factory = very easy way to make multiple objects with other variables
+entity = 
+velocity = 
+
+
+if()
+{
+    = als iets waar is dan kun je het uitvoeren, als het in een loop staat dan doet hij het altijd als het waar is.
+}else if()
+{
+    = als je een tweede if wilt maken
+}else
+{
+    = als het tegenovergestelde van wat er in de if zit waar is.
+}
+ 
+
+array(); = een lijst met objecten

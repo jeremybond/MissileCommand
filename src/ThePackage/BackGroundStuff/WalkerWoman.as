@@ -1,6 +1,7 @@
 package ThePackage.BackGroundStuff 
 {
 	import flash.events.Event;
+	import ThePackage.Main;
 	/**
 	 * ...
 	 * @author Jeremy Bond
@@ -14,16 +15,17 @@ package ThePackage.BackGroundStuff
 			addChild(art);
 			
 			id = ("WalkerRight");
-			speed = 15;
+			speed = 5;
 			left = false;
-			
-			addEventListener(Event.ADDED_TO_STAGE, init);
-		}
-		
-		private function init(e:Event):void 
-		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			position = (stage.stageWidth + 10);
+			PosZ = -1;
+			position = 810;
+			//addEventListener(Event.ADDED_TO_STAGE, init);
+		//}
+		//
+		//private function init(e:Event):void 
+		//{
+			//removeEventListener(Event.ADDED_TO_STAGE, init);
+			//position = (stage.stageWidth + 10);
 		}
 		
 		

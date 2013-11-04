@@ -14,8 +14,9 @@ package ThePackage.BackGroundStuff
 			
 			id = ("WalkerLeft");
 			position = -10;
-			speed = 15;
+			speed = 5;
 			left = true;
+			PosZ = -1;
 		}
 		
 	}

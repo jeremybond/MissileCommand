@@ -1,8 +1,10 @@
 package ThePackage.BackGroundStuff 
 {
+	import adobe.utils.CustomActions;
 	import flash.display.MovieClip;
 	import flash.events.PressAndTapGestureEvent;
 	import flash.events.Event;
+	import ThePackage.Main;
 	/**
 	 * ...
 	 * @author Jeremy Bond
@@ -17,6 +19,7 @@ package ThePackage.BackGroundStuff
 		private var _pos 	: Number;
 		private var _speed	: Number;
 		private var _left	: Boolean;
+		private var _zPos	: Number;
 		
 		//////////name
 		public function get id():String
@@ -54,16 +57,25 @@ package ThePackage.BackGroundStuff
 		{
 			_left = left;
 		}
+		public function get PosZ(): Number
+		{
+			return _zPos;
+		}
+		public function set PosZ(PosZ:Number): void
+		{
+			_zPos = PosZ;
+		}
 		/*
 		*update
 		*/
 		public function update():void
 		{
+			//trace("lopen!!!");
 			if (_left == true)
 			{
-				this.y += _speed;
+				this.x += _speed;
 			}else {
-				this.y -= -speed;
+				this.x -= _speed;
 			}
 			
 		}

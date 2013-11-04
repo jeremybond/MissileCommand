@@ -1,6 +1,7 @@
 package ThePackage.BackGroundStuff 
 {
 	import flash.events.Event;
+	import ThePackage.Main;
 	/**
 	 * ...
 	 * @author Jeremy Bond
@@ -14,17 +15,15 @@ package ThePackage.BackGroundStuff
 			addChild(art);
 			
 			name = ("RunnerRight");
-			speed = 20;
+			speed = 10;
 			left = false;
+			position = 810;
+			PosZ = -1;
 			
-			addEventListener(Event.ADDED_TO_STAGE, init);
+			
 		}
 		
-		private function init(e:Event):void 
-		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			position = (stage.stageWidth + 10);
-		}
+		
 		
 	}
 

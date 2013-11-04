@@ -26,6 +26,7 @@ package ThePackage.BackGroundStuff
 			
 			guy.scaleX	=	0.5 + (Math.random() * 1);
 			guy.scaleY	=	guy.scaleX;
+			guy.z = 100;
 			
 			
 			return guy;

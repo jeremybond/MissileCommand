@@ -16,23 +16,23 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'1-10-2013'</value>
+      <value>'4-11-2013'</value>
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>C:\MA\leerjaar2\Berend\MissileCommander\src</path-element>
+      <path-element>C:\MA\leerjaar2\Berend(Baas)\MissileCommander\src</path-element>
       <path-element>C:\Users\jeremy bond\Documents\CS6 documenten\flash develop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-      <path-element>C:\MA\leerjaar2\Berend\MissileCommander\lib\Cannon.swc</path-element>
-      <path-element>C:\MA\leerjaar2\Berend\MissileCommander\lib\Bullet.swc</path-element>
-      <path-element>C:\MA\leerjaar2\Berend\MissileCommander\lib\FallingObj2.swc</path-element>
-      <path-element>C:\MA\leerjaar2\Berend\MissileCommander\lib\FalingObj1.swc</path-element>
-      <path-element>C:\MA\leerjaar2\Berend\MissileCommander\lib\AllArt.swc</path-element>
+      <path-element>C:\MA\leerjaar2\Berend(Baas)\MissileCommander\lib\Cannon.swc</path-element>
+      <path-element>C:\MA\leerjaar2\Berend(Baas)\MissileCommander\lib\Bullet.swc</path-element>
+      <path-element>C:\MA\leerjaar2\Berend(Baas)\MissileCommander\lib\FallingObj2.swc</path-element>
+      <path-element>C:\MA\leerjaar2\Berend(Baas)\MissileCommander\lib\FalingObj1.swc</path-element>
+      <path-element>C:\MA\leerjaar2\Berend(Baas)\MissileCommander\lib\AllArt.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>C:\MA\leerjaar2\Berend\MissileCommander\src\ThePackage\Main.as</path-element>
+    <path-element>C:\MA\leerjaar2\Berend(Baas)\MissileCommander\src\ThePackage\Main.as</path-element>
   </file-specs>
   <default-background-color>#808080</default-background-color>
   <default-frame-rate>30</default-frame-rate>

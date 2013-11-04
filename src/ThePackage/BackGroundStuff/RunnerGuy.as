@@ -14,8 +14,9 @@ package ThePackage.BackGroundStuff
 			
 			id = ("RunnerLeft");
 			position = -10;
-			speed = 20;
+			speed = 10;
 			left = true;
+			PosZ = -1;
 			
 		}
 		
