@@ -181,7 +181,7 @@ package ThePackage
 			stage.addEventListener(Event.ENTER_FRAME, loop);
 			stage.addEventListener(MouseEvent.CLICK, mouseClick);
 		}
-		
+		////////////////////SCREAMSOUNDS////////////////////
 		private function spawnScreamSound(e:TimerEvent):void
 		{
 			if (gameOn)
@@ -213,7 +213,7 @@ package ThePackage
 				}
 			}
 		}
-		
+		////////////////////SPAWNING HUMANS////////////////////
 		private function spawnHuman(e:TimerEvent):void
 		{
 			var randomHuman:int = Math.random() * 4;
@@ -224,7 +224,7 @@ package ThePackage
 			addChild(newHuman);
 			screamTimer.start();
 		}
-		
+		////////////////////SPAWNING METEOORS////////////////////
 		private function spawnCrap(e:TimerEvent):void
 		{
 			var randomType:Number = (Math.random() * 2);
@@ -234,7 +234,7 @@ package ThePackage
 			newCrap.y = -20;
 			addChild(newCrap);
 		}
-		
+		////////////////////SPAWNING BULLETS////////////////////
 		private function mouseClick(e:MouseEvent):void
 		{
 			if (gameOn)
@@ -277,7 +277,7 @@ package ThePackage
 				_shot.play();
 			}
 		}
-		
+		////////////////////LOOP////////////////////
 		public function loop(e:Event):void
 		{
 			if (gameOn)
@@ -289,11 +289,11 @@ package ThePackage
 				{
 					ghallghumans = _allHuman[n];
 					ghallghumans.update();
-					/*if (ghallghumans.x <= -50||ghallghumans.x >= 850)
+					if (ghallghumans.x <= -50||ghallghumans.x >= 850)
 					   {
 					   removeChild(ghallghumans);
 					   _allHuman.splice(n, 1);
-					 }*/
+					}
 				}
 				/////////////////////////// all bullets get updated and deleted ///////////////////////////
 				var bulled:MovieClip;
@@ -368,7 +368,7 @@ package ThePackage
 				}
 			}
 		}
-		
+		////////////////////REMOVE EVERYTHING FROM THE SCREEN////////////////////
 		private function goToStartScreen(e:MouseEvent):void
 		{
 			removeChild(background)
@@ -381,10 +381,9 @@ package ThePackage
 			_allCraps.length = 0;
 			addChild(startScreen);
 		}
-		
+		////////////////////REMOVE EVERYTHING FROM THE SCREEN////////////////////
 		private function goToScoreScreen(e:MouseEvent):void
 		{
-			//remove everything!!!!!!!!!!!
 			removeChild(background)
 			removeChild(tower1);
 			removeChild(tower2);
@@ -396,7 +395,7 @@ package ThePackage
 			addChild(scoreScreen);
 		
 		}
-		
+		////////////////////EXIT THE GAME////////////////////
 		private function exitGame(e:MouseEvent):void
 		{
 			fscommand("quit");
